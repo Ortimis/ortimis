@@ -32,11 +32,40 @@ class ComposerStaticInit600d6defcf7a7f03511c63c0da2f3125
         ),
     );
 
+    public static $classMap = array (
+        'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
+        'Dotenv\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
+        'Dotenv\\Exception\\InvalidCallbackException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php',
+        'Dotenv\\Exception\\InvalidFileException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidFileException.php',
+        'Dotenv\\Exception\\InvalidPathException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidPathException.php',
+        'Dotenv\\Exception\\ValidationException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
+        'Dotenv\\Loader' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Loader.php',
+        'Dotenv\\Validator' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Validator.php',
+        'ortimis\\Api\\Callbacks\\SettingsCallback' => __DIR__ . '/../..' . '/config/Api/Callbacks/SettingsCallback.php',
+        'ortimis\\Api\\Customizer' => __DIR__ . '/../..' . '/config/Api/Customizer.php',
+        'ortimis\\Api\\Settings' => __DIR__ . '/../..' . '/config/Api/Settings.php',
+        'ortimis\\Api\\Widgets\\TextWidget' => __DIR__ . '/../..' . '/config/Api/Widgets/TextWidget.php',
+        'ortimis\\Core\\Sidebar' => __DIR__ . '/../..' . '/config/Core/Sidebar.php',
+        'ortimis\\Core\\Tags' => __DIR__ . '/../..' . '/config/Core/Tags.php',
+        'ortimis\\Core\\WalkerNav' => __DIR__ . '/../..' . '/config/Core/WalkerNav.php',
+        'ortimis\\Custom\\Admin' => __DIR__ . '/../..' . '/config/custom/Admin.php',
+        'ortimis\\Custom\\Custom' => __DIR__ . '/../..' . '/config/custom/Custom.php',
+        'ortimis\\Custom\\Extras' => __DIR__ . '/../..' . '/config/custom/Extras.php',
+        'ortimis\\Init' => __DIR__ . '/../..' . '/config/Init.php',
+        'ortimis\\Plugins\\Acf' => __DIR__ . '/../..' . '/config/Plugins/Acf.php',
+        'ortimis\\Plugins\\AwpsJetpack' => __DIR__ . '/../..' . '/config/Plugins/AwpsJetpack.php',
+        'ortimis\\Setup\\Enqueue' => __DIR__ . '/../..' . '/config/setup/Enqueue.php',
+        'ortimis\\Setup\\Header' => __DIR__ . '/../..' . '/config/setup/Header.php',
+        'ortimis\\Setup\\Menus' => __DIR__ . '/../..' . '/config/setup/Menus.php',
+        'ortimis\\Setup\\Setup' => __DIR__ . '/../..' . '/config/setup/Setup.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit600d6defcf7a7f03511c63c0da2f3125::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit600d6defcf7a7f03511c63c0da2f3125::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit600d6defcf7a7f03511c63c0da2f3125::$classMap;
 
         }, null, ClassLoader::class);
     }
