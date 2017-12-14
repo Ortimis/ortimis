@@ -39,12 +39,7 @@ Thumbs.db
 **/.sass-cache/*
 **/.map
 
-# Composer #
-##########
-vendor
-!assets/js/vendor/
-wpcs/
-composer.lock
+
 
 # Bower #
 ##########
