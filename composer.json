@@ -1,0 +1,23 @@
+{
+	"name": "alecaddd/ortimis",
+	"description": "Alecaddd WordPress Starter Theme for savvy developers",
+	"keywords": ["WordPress", "Theme", "Starter"],
+	"homepage": "https://github.com/Alecaddd/ortimis",
+	"license": "GPL-3.0",
+	"version": "2.0.0",
+	"authors": [
+        {
+            "name": "Alessandro Castellani",
+            "email": "me@alecaddd.com",
+            "homepage": "http://alecaddd.com",
+            "role": "Developer"
+        }
+	],
+    "require": {
+    	"vlucas/phpdotenv": "^2.4"
+    },
+	"autoload": {
+		"psr-4": {"ortimis\\": "./config"},
+		"files": ["./config/Helpers.php"]
+	}
+}

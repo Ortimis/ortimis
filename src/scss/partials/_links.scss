@@ -1,0 +1,35 @@
+a {
+	@include transition(all $time $ease);
+
+	&,
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+a {
+	color: $font-color;
+
+	&:visited {
+		color: $dark-blue;;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $light-blue;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&,
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,46 @@
+header {
+	position: relative;
+	min-width: 100%;
+}
+
+#masthead {
+	position: fixed;
+	min-width: 100%;
+	z-index: 1000;
+}
+
+.blue-bg {
+	background-color: $light-blue;
+}
+
+// .main-navigation {
+// 	position: fixed;
+// 	z-index: 1000;
+// 	width: 100%;
+//
+//
+// 	ul {
+// 		list-style-type: none;
+// 		display: flex;
+// 		justify-content: flex-end;
+// 		margin: 1em 0;
+//
+//
+// 		li {
+// 			margin: 0 1em 0 1em;
+// 			a {
+// 				color: $dark-grey;
+// 				font-weight: 100;
+//
+// 				&:hover {
+// 					opacity: 0.6;
+// 				}
+// 			}
+// 		}
+// 	}
+//
+// 	.icon {
+// 		display: none;
+// 		color: $dark-grey;
+// 	}
+// }

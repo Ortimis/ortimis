@@ -1,0 +1,43 @@
+#contact{
+	position: relative;
+	min-height: 400px;
+	background-color: $dark_blue;
+	color: white;
+
+	.wpcf7 {
+		.wpcf7-form-control {
+			background-color: rgba(0,0,0,0);
+			border:0;
+			border-bottom: 1px solid white;
+			color: white;
+			max-width: 100%;
+			width: 50%;
+		}
+	}
+}
+
+#colophon {
+	position: relative;
+	background-color: $light-blue;
+	bottom: 0;
+	min-height: 200px;
+	z-index: -1;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 3em 0;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			color: $light-grey;
+		}
+	}
+}
+
+#page {
+	overflow: hidden;
+}
