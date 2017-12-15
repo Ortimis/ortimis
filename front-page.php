@@ -77,17 +77,17 @@ get_header(); ?>
 								<div class="col-md-8 col-sm-12 box-center-bottom">
 									<?php $taxonomyName = "projektart";
 										$post_id = get_the_id();
-										$object_terms = wp_get_object_terms( $post_id, $taxonomyName );
+										$post_terms[] = wp_get_post_terms( $post_id, $taxonomyName, array() );
 										$i = 0;
 
-										echo '<span class="projektart"><p>';
-										foreach ( $object_terms as $term ) {
-											if ( $term->parent ) {
-												$term_array[] = $term->name;
-											}
-										}
+										//echo '<span class="projektart"><p>';
+										// foreach ( $object_terms as $term ) {
+										// 	if ( $term->parent ) {
+										// 		$term_array = $term->name;
+										// 	}
+										// }
 
-										echo implode( ' | ', $term_array ) . '</p></span>'; ?>
+										// print_r( '<span class="projektart"><p>' . implode( ' | ', $post_terms ) . '</p></span>' ); ?>
 
 									<h2 class="featured-title"><?php the_title(); ?></h2>
 									<p class="featured-p"><?php the_excerpt(); ?><br></p>
@@ -118,52 +118,58 @@ get_header(); ?>
 
 
 
-<!--
-<div class="container">
-	<div class="row ms-container" id="ms-container">
+<section id="resonanz">
+	<div class="container">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	    <div class="ms-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
-	        <?php if (has_post_thumbnail()) : ?>
+		<div class="row ms-container" id="ms-container">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<h1 class="resonanz-title">Resonanz<br> & Aktuelles</h1>
+			</div>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	            <div class="article-preview-image">
+		    <article class="ms-item col-lg-3 col-md-3 col-sm-3 col-xs-12">
 
-	                <?php the_post_thumbnail('large'); ?>
+		        <?php if (has_post_thumbnail()) : ?>
 
-	            </div>
+		            <div class="article-preview-image">
 
-	        <?php else : ?>
+		                <?php the_post_thumbnail('large'); ?>
 
-	        <?php endif; ?>
+		            </div>
 
-	            <h2 class="post-title"><a href="<?php the_permalink(); ?>" class="post-title-link"><?php the_title(); ?></a></h2>
+		        <?php else : ?>
 
-	        <?php the_excerpt(); ?>
+		        <?php endif; ?>
 
-	    <div class="clearfix"></div>
+		           <a href="<?php the_permalink(); ?>" class="post-title-link"> <h3 class="post-title"><?php the_title(); ?></h3></a>
+							 <span><?php the_date('m / Y'); ?></span>
 
-	<a href="<?php the_permalink(); ?>" class="btn btn-transp btn-block">Read More</a>
+		        <?php the_excerpt(); ?>
 
-	    <div class="clearfix"></div>
+		    <div class="clearfix"></div>
 
-	    </div>
+		<a href="<?php the_permalink(); ?>" class="btn btn-transp btn-block">Mehr</a>
 
-	    <?php endwhile;
+		    <div class="clearfix"></div>
 
-	    else : ?>
+			</article>
 
-	        <article class="no-posts">
+		    <?php endwhile;
 
-	            <h1><?php _e('No posts were found.'); ?></h1>
+		    else : ?>
 
-	        </article>
-	    <?php endif; ?>
+		        <article class="no-posts">
 
-	                </div>
-	<div class="clearfix"></div>
-</div> -->
+		            <p><?php _e('Keine Posts gefunden.'); ?></p>
 
+		        </article>
+		    <?php endif; ?>
+
+		                </div>
+		<div class="clearfix"></div>
+	</div>
+</section>
 <?php
 get_footer();

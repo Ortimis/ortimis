@@ -64,62 +64,48 @@ class Custom
 	}
 
 	// Register Custom Taxonomy
-public function projektart_taxonomy() {
+	public function projektart_taxonomy() {
 
-	$labels = array(
-		'name'                       => _x( 'Projektarten', 'Taxonomy General Name', 'ortimis' ),
-		'singular_name'              => _x( 'Projektart', 'Taxonomy Singular Name', 'ortimis' ),
-		'menu_name'                  => __( 'Projektarten', 'ortimis' ),
-		'all_items'                  => __( 'All Items', 'ortimis' ),
-		'parent_item'                => __( 'Parent Item', 'ortimis' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'ortimis' ),
-		'new_item_name'              => __( 'New Item Name', 'ortimis' ),
-		'add_new_item'               => __( 'Add New Item', 'ortimis' ),
-		'edit_item'                  => __( 'Edit Item', 'ortimis' ),
-		'update_item'                => __( 'Update Item', 'ortimis' ),
-		'view_item'                  => __( 'View Item', 'ortimis' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'ortimis' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'ortimis' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'ortimis' ),
-		'popular_items'              => __( 'Popular Items', 'ortimis' ),
-		'search_items'               => __( 'Search Items', 'ortimis' ),
-		'not_found'                  => __( 'Not Found', 'ortimis' ),
-		'no_terms'                   => __( 'No items', 'ortimis' ),
-		'items_list'                 => __( 'Items list', 'ortimis' ),
-		'items_list_navigation'      => __( 'Items list navigation', 'ortimis' ),
-	);
-	$rewrite = array(
-		'slug'                       => 'projektart',
-		'with_front'                 => true,
-		'hierarchical'               => false,
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => false,
-		'rewrite'                    => $rewrite,
-	);
-	register_taxonomy( 'projektart', array( 'projects' ), $args );
+		$labels = array(
+			'name'                       => _x( 'Projektarten', 'Taxonomy General Name', 'ortimis' ),
+			'singular_name'              => _x( 'Projektart', 'Taxonomy Singular Name', 'ortimis' ),
+			'menu_name'                  => __( 'Projektarten', 'ortimis' ),
+			'all_items'                  => __( 'All Items', 'ortimis' ),
+			'parent_item'                => __( 'Parent Item', 'ortimis' ),
+			'parent_item_colon'          => __( 'Parent Item:', 'ortimis' ),
+			'new_item_name'              => __( 'New Item Name', 'ortimis' ),
+			'add_new_item'               => __( 'Add New Item', 'ortimis' ),
+			'edit_item'                  => __( 'Edit Item', 'ortimis' ),
+			'update_item'                => __( 'Update Item', 'ortimis' ),
+			'view_item'                  => __( 'View Item', 'ortimis' ),
+			'separate_items_with_commas' => __( 'Separate items with commas', 'ortimis' ),
+			'add_or_remove_items'        => __( 'Add or remove items', 'ortimis' ),
+			'choose_from_most_used'      => __( 'Choose from the most used', 'ortimis' ),
+			'popular_items'              => __( 'Popular Items', 'ortimis' ),
+			'search_items'               => __( 'Search Items', 'ortimis' ),
+			'not_found'                  => __( 'Not Found', 'ortimis' ),
+			'no_terms'                   => __( 'No items', 'ortimis' ),
+			'items_list'                 => __( 'Items list', 'ortimis' ),
+			'items_list_navigation'      => __( 'Items list navigation', 'ortimis' ),
+		);
+		$rewrite = array(
+			'slug'                       => 'projektart',
+			'with_front'                 => true,
+			'hierarchical'               => false,
+		);
+		$args = array(
+			'labels'                     => $labels,
+			'hierarchical'               => true,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => false,
+			'rewrite'                    => $rewrite,
+		);
+		register_taxonomy( 'projektart', array( 'projects' ), $args );
 
-}
-//
-
-
-
-	/**
-	 * Flush Rewrite on CPT activation
-	 * @return empty
-	 */
-	public function rewrite_flush()
-	{
-		// call the CPT init function
-		$this->custom_post_type();
-
-		// Flush the rewrite rules only on theme activation
-		flush_rewrite_rules();
 	}
+
+
 }

@@ -3,14 +3,13 @@ button {
 }
 
 .btn {
-	padding: ($gutter) ($gutter * 1.5);
+	padding: ($gutter) ($gutter);
 	border: none;
 	outline: 1px solid;
 	@include transition(all $time $ease);
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 15px;
 	font-smoothing: antialiased;
-
 	// @extend .h4;
 
 	&:active {
