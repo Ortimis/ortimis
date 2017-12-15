@@ -13,18 +13,24 @@
 
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer container-fluid" role="contentinfo">
-		<div class="row justify-center">
-			<div class="col-md-4">
-				Jakob Ortmann &copy; 2016 – <?php echo date('Y'); ?>
-				<a href="#">Impressum</a>
+		<div class="container">
+			<div class="row justify-center">
+				<div class="col-md-4">
+					<ul>
+						<li><a href="#">Impressum</a></li>
+						<li><a href="#">Disclaimer</a></li>
+					</ul>
+
+
+				</div>
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="row justify-center">
+				<p>Jakob Ortmann &copy; 2016 – <?php echo date('Y'); ?></p>
 			</div>
-			<div class="col-md-4">
-			</div>
-		</div>
-		<div class="row justify-center">
-			<p>Jakob Ortmann &copy; 2016 – <?php echo date('Y'); ?></p>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
