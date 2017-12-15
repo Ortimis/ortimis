@@ -78,16 +78,16 @@ get_header(); ?>
 									<?php $taxonomyName = "projektart";
 										$post_id = get_the_id();
 										$object_terms = wp_get_object_terms( $post_id, $taxonomyName );
-										$res ='';
+										$i = 0;
 
 										echo '<span class="projektart"><p>';
 										foreach ( $object_terms as $term ) {
 											if ( $term->parent ) {
-												echo $term->name;
+												$term_array[] = $term->name;
 											}
-
 										}
-										echo '</p></span>'; ?>
+
+										echo implode( ' | ', $term_array ) . '</p></span>'; ?>
 
 									<h2 class="featured-title"><?php the_title(); ?></h2>
 									<p class="featured-p"><?php the_excerpt(); ?><br></p>
