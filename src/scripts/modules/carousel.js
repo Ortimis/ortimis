@@ -17,6 +17,26 @@ class Carousel {
           swipe: false,
           swipeToSlide: false,
         });
+
+        $( '.blog-carousel' ).slick({
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          autoplay: false,
+          draggable: true,
+          swipe: true,
+          swipeToSlide: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
+        });
     }
 
 }
