@@ -140,3 +140,14 @@
     color:black!important;
   }
 }
+
+#Kunden {
+  .kunde {
+    filter:grayscale(100%);
+    transition: .2s ease-in-out;
+
+    &:hover {
+        filter: grayscale(30%);
+    }
+  }
+}

@@ -30,7 +30,27 @@ class Carousel {
           swipeToSlide: true,
           responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 560,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
+        });
+
+        $( '.kunden-carousel' ).slick({
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          autoplay: false,
+          draggable: true,
+          swipe: true,
+          swipeToSlide: true,
+          responsive: [
+            {
+              breakpoint: 560,
               settings: {
                 slidesToShow: 1,
               }

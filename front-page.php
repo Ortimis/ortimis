@@ -171,4 +171,45 @@ get_header(); ?>
 	</div>
 </section>
 <?php
+// WP_Query arguments
+$args = array(
+	'post_type'              => array( 'kunden' ),
+	'post_status'            => array( 'publish' ),
+	'nopaging'               => true,
+);
+?>
+
+
+<section id="Kunden">
+	<div class="container">
+
+		<div class="row">
+
+			<div class="kunden-carousel col-lg-8 col-md-9 col-sm-12 col-xs-12">
+				<?php // The Query
+					$query_kunden = new WP_Query( $args );
+
+					// The Loop
+					if ( $query_kunden->have_posts() ) {
+						while ( $query_kunden->have_posts() ) {
+							$query_kunden->the_post(); ?>
+							<div class="kunde  col-lg-4 col-md-6 col-sm-6 col-xs-12 <?php post_class(); ?>">
+								<?php the_post_thumbnail('medium'); ?>
+							</div>
+					<?php	}
+					} else {
+						// no posts found
+					}
+
+					// Restore original Post Data
+					wp_reset_postdata();?>
+
+		  </div>
+
+			<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+					<h1 class="resonanz-title">Kunden</h1>
+			</div>
+	</div>
+</section>
+<?php
 get_footer();
