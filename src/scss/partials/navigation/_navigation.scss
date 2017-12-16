@@ -3,3 +3,84 @@
 ## Menus
 --------------------------------------------------------------*/
 @import "menus";
+
+
+.posts-navigation,
+.post-navigation {
+	border: 1px solid #eaeaea;
+	border-width: 1px 0 0;
+	margin: 5.3em -1000px 0;
+}
+
+.nav-next {
+	float: right;
+	//padding-left: 30px;
+	text-align: right;
+	width: 50%;
+}
+
+.nav-previous {
+	float: left;
+	// padding-right: 30px;
+	text-align: left;
+	width: 50%;
+}
+
+.nav-links a {
+	display: block;
+	font-weight: 600;
+	line-height: 1.6em;
+	padding-top: 125px;
+	padding-bottom: 80px;
+	position: relative;
+}
+
+.single .nav-links a {
+	padding-top: 145px;
+}
+
+.nav-links a:after {
+	display: inline-block;
+	font-size: 26px;
+	margin-bottom: 10px;
+}
+
+.single .nav-links a:before {
+	color: #b8b8b8;
+	display: block;
+	font-weight: 400;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 115px;
+}
+
+.single .nav-previous a:before {
+	content: "Zurück zu";
+}
+
+.single .nav-next a:before {
+	content: "Weiter mit";
+	right: 0;
+}
+
+.nav-links a:after {
+	display: block;
+	position: absolute;
+	top: 80px;
+	-webkit-transition: -webkit-transform .3s;
+	-moz-transition: -moz-transform .3s;
+	-ms-transition: -ms-transform .3s;
+	-o-transition: -o-transform .3s;
+	transition: transform .3s;
+}
+
+.nav-next a:after {
+	text-align: left;
+	right: 0;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}

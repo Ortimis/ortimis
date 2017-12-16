@@ -185,7 +185,7 @@ $args = array(
 
 		<div class="row">
 
-			<div class="kunden-carousel col-lg-8 col-md-9 col-sm-12 col-xs-12">
+			<div class="kunden-carousel col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<?php // The Query
 					$query_kunden = new WP_Query( $args );
 
@@ -193,8 +193,8 @@ $args = array(
 					if ( $query_kunden->have_posts() ) {
 						while ( $query_kunden->have_posts() ) {
 							$query_kunden->the_post(); ?>
-							<div class="kunde  col-lg-4 col-md-6 col-sm-6 col-xs-12 <?php post_class(); ?>">
-								<?php the_post_thumbnail('medium'); ?>
+							<div class="kunde <?php post_class(); ?>">
+								<?php the_post_thumbnail( 'medium' ); ?>
 							</div>
 					<?php	}
 					} else {
@@ -205,10 +205,6 @@ $args = array(
 					wp_reset_postdata();?>
 
 		  </div>
-
-			<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
-					<h1 class="resonanz-title">Kunden</h1>
-			</div>
 	</div>
 </section>
 <?php

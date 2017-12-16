@@ -39,12 +39,12 @@ class Carousel {
         });
 
         $( '.kunden-carousel' ).slick({
-          infinite: false,
-          slidesToShow: 2,
+          infinite: true,
+          slidesToShow: 6,
           slidesToScroll: 1,
           dots: false,
           arrows: true,
-          autoplay: false,
+          autoplay: true,
           draggable: true,
           swipe: true,
           swipeToSlide: true,
