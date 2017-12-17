@@ -75,19 +75,11 @@ get_header(); ?>
 
 							<div class="row">
 								<div class="col-md-8 col-sm-12 box-center-bottom">
-									<?php $taxonomyName = "projektart";
-										$post_id = get_the_id();
-										$post_terms[] = wp_get_post_terms( $post_id, $taxonomyName, array() );
-										$i = 0;
-
-										//echo '<span class="projektart"><p>';
-										// foreach ( $object_terms as $term ) {
-										// 	if ( $term->parent ) {
-										// 		$term_array = $term->name;
-										// 	}
-										// }
-
-										// print_r( '<span class="projektart"><p>' . implode( ' | ', $post_terms ) . '</p></span>' ); ?>
+									<?php
+										$taxonomyName = "projektart";
+										$post_terms = wp_get_post_terms( $post->ID, $taxonomyName, array("fields" => "names", "orderby" => "parent") );
+										array_shift( $post_terms ); //remove parent term
+										print_r( '<span class="projektart"><p>' . implode( ' | ', $post_terms ) . '</p></span>' ); ?>
 
 									<h2 class="featured-title"><?php the_title(); ?></h2>
 									<p class="featured-p"><?php the_excerpt(); ?><br></p>

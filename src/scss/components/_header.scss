@@ -8,6 +8,10 @@ header {
 	min-width: 100%;
 	z-index: 1000;
 	padding: 0 0 1em 0;
+
+	@media (max-width: $xs) {
+		position: relative;
+	}
 }
 
 .blue-bg {

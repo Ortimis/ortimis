@@ -45,6 +45,7 @@ class Carousel {
           dots: false,
           arrows: true,
           autoplay: true,
+          autoplaySpeed: 2000,
           draggable: true,
           swipe: true,
           swipeToSlide: true,
@@ -52,7 +53,7 @@ class Carousel {
             {
               breakpoint: 560,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
               }
             }
           ]
