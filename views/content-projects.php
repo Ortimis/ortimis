@@ -12,14 +12,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<div class="row justify-center">
-			<?php if ( get_the_post_thumbnail() ) { ?>
-			<div class="col-sm-5">
+			<?php if ( get_field( 'show_featured_image' ) == 1 ) { ?>
+			<div class="col-md-5 col-sm-12 col-xs-12">
 
 					<?php the_post_thumbnail('large'); ?>
 
 			</div> <?php
 			} ?>
-			<div class="col-sm-5">
+      <div class="col-lg-1">
+
+      </div>
+			<div class=" col-md-5 col-sm-12 col-xs-12">
 				<?php
 						if ( is_single() ) :
 								the_title( '<h1 class="entry-title">', '</h1>' );
@@ -34,17 +37,26 @@
 				<?php
 						endif; ?>
 
-						<span><?php the_date('m / Y'); ?> | Resonanz & Aktuelles</span>
+            <?php
+              $taxonomyName = "projektart";
+              $post_terms = wp_get_post_terms( $post->ID, $taxonomyName, array("fields" => "names", "orderby" => "parent") );
+              array_shift( $post_terms ); //remove parent term
+              print_r( '<span class="projektart">' . implode( ' | ', $post_terms ) . '</span>' ); ?>
+
+						<p><?php the_date('m / Y'); ?>
+
 
 						<?php if (has_excerpt() ) {
 							the_excerpt();
 						} ?>
+          </p>
 
 
 			</div>
 		</div><!-- .row -->
 	</header><!-- .entry-header -->
 	<div class="entry-content container-narrow">
+    <?php the_field('video_iframe'); ?>
 		<?php
 			the_content( sprintf(
 					/* translators: %s: Name of current post. */

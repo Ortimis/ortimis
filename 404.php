@@ -18,7 +18,8 @@ get_header(); ?>
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
-					<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ortimis' ); ?></h1>
+					<h1><?php esc_html_e( 'Oops! Diese Seite gibt es nicht.', 'ortimis' ); ?></h1>
+					<?php get_search_form(); ?>
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
@@ -26,7 +27,7 @@ get_header(); ?>
 		</div><!-- .col- -->
 
 		<div class="col-sm-4">
-			<?php get_sidebar(); ?>
+
 		</div><!-- .col- -->
 
 	</div><!-- .row -->

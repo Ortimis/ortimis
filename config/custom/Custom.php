@@ -102,7 +102,8 @@ class Custom
 			'has_archive'        => false,
 			'hierarchical'       => false,
 			'menu_position'      => 5, // below post
-			'supports'           => array( 'title', 'thumbnail', 'excerpt' )
+			'supports'           => array( 'title', 'thumbnail', 'excerpt' ),
+			'exclude_from_search' => true
 		);
 
 		register_post_type( 'Kunden', $args );

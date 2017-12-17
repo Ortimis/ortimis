@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 
-		<header id="masthead" class="site-header <?php if ( is_front_page() ) : ?>blue-bg <?php endif; ?>" role="banner">
+		<header id="masthead" class="site-header <?php if ( is_front_page() ) : ?>blue-bg <?php else : ?> white-bg <?php endif; ?>" role="banner">
 
 			<div class="container">
 

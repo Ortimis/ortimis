@@ -15,7 +15,7 @@
 
 				<?php if ( 'post' === get_post_type() ) : ?>
 						<div class="entry-meta">
-							<?php ortimis\core\tags::posted_on(); ?>
+							<!-- <?php ortimis\core\tags::posted_on(); ?> -->
 						</div><!-- .entry-meta -->
 
 		<?php endif; ?>
@@ -23,7 +23,7 @@
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
+			the_excerpt( sprintf(
 					/* translators: %s: Name of current post. */
 					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ortimis' ), array(
 						'span' => array(
@@ -39,6 +39,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ortimis\core\tags::entry_footer(); ?>
+		<!-- <?php ortimis\core\tags::entry_footer(); ?> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

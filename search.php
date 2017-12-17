@@ -11,9 +11,9 @@ get_header(); ?>
 
 <div class="container">
 
-	<div class="row">
+	<div class="row justify-center">
 
-		<div class="col-sm-8">
+		<div class="col-sm-6">
 
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
@@ -24,7 +24,7 @@ get_header(); ?>
 						<header>
 							<h1 class="page-title"><?php printf(
 							/* translators: %s: Search Term. */
-							esc_html__( 'Search Results for: %s', 'ortimis' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+							esc_html__( 'Suchergebnisse für: %s', 'ortimis' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 						</header><!-- .page-header -->
 
 					<?php
@@ -49,7 +49,7 @@ get_header(); ?>
 		</div><!-- .col- -->
 
 		<div class="col-sm-4">
-			<?php get_sidebar(); ?>
+
 		</div><!-- .col- -->
 
 	</div><!-- .row -->

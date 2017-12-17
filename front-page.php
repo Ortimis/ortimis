@@ -133,7 +133,7 @@ get_header(); ?>
 				            </div>
 
 				        <?php else : ?>
-
+ 
 				        <?php endif; ?>
 
 				           <a href="<?php the_permalink(); ?>" class="post-title-link"> <h3 class="post-title"><?php the_title(); ?></h3></a>

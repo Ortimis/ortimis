@@ -5,6 +5,7 @@ var $ = require( 'jquery' );
 
 // Import libraries
 import 'slick-carousel';
+// import 'izimodal';
 
 
 // Import custom modules

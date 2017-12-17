@@ -1,0 +1,20 @@
+#primary {
+  margin-top: 0em;
+  padding-top: 6em;
+
+  .entry-title {
+    margin-top: 0;
+  }
+
+  .entry-content {
+    margin-top: 6em;
+  }
+}
+
+
+
+iframe {
+  .vp-player-layout {
+    top: 0 !important;
+  }
+}

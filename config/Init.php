@@ -25,7 +25,7 @@ final class Init
 			Api\Widgets\TextWidget::class,
 			Setup\Setup::class,
 			Setup\Menus::class,
-			Setup\Header::class,
+			//Setup\Header::class,
 			Setup\Enqueue::class,
 			Custom\Custom::class,
 			Custom\Admin::class,
