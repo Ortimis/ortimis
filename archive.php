@@ -49,9 +49,6 @@ get_header(); ?>
 
 		</div><!-- .col- -->
 
-		<div class="col-sm-4">
-			<?php get_sidebar(); ?>
-		</div><!-- .col- -->
 
 	</div><!-- .row -->
 

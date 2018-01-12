@@ -126,6 +126,10 @@
     min-height: 100%;
   }
 
+  .post-title {
+    color: black;
+  }
+
   .slick-prev, .slick-nav {
     top: 100%;
     left: inherit;
@@ -143,7 +147,7 @@
 }
 
 #Kunden {
-  padding: 4em 0;
+  padding: 4em 0 1.6em;
   background-color: #DDDD;
 
   .kunde {
@@ -155,7 +159,7 @@
     justify-content: center;
 
     img {
-      margin-top: 50%;
+      margin-top: 90px;
       transform: translateY(-50%);
       width: 70%;
     }

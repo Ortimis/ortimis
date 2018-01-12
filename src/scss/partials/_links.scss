@@ -9,15 +9,15 @@ a {
 }
 
 a {
-	color: black;
+	color: grey;
 
 	&:visited {
-		color: black;
+		color: grey;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $light-blue;
+		color: black;
 	}
 	&:focus {
 		outline: thin dotted;

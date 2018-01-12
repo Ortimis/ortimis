@@ -133,7 +133,7 @@ get_header(); ?>
 				            </div>
 
 				        <?php else : ?>
- 
+
 				        <?php endif; ?>
 
 				           <a href="<?php the_permalink(); ?>" class="post-title-link"> <h3 class="post-title"><?php the_title(); ?></h3></a>
@@ -186,7 +186,7 @@ $args = array(
 						while ( $query_kunden->have_posts() ) {
 							$query_kunden->the_post(); ?>
 							<div class="kunde <?php post_class(); ?>">
-								<?php the_post_thumbnail( 'medium' ); ?>
+								<img src="<?php the_post_thumbnail_url( 'medium' ); ?>" title="<?php echo the_title(); ?>">
 							</div>
 					<?php	}
 					} else {
