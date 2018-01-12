@@ -19,9 +19,6 @@
 
 			</div> <?php
 			} ?>
-      <div class="col-lg-1">
-
-      </div>
 			<div class=" col-md-5 col-sm-12 col-xs-12">
 				<?php
 						if ( is_single() ) :
@@ -40,14 +37,14 @@
             <?php
               $taxonomyName = "projektart";
               $post_terms = wp_get_post_terms( $post->ID, $taxonomyName, array("fields" => "names", "orderby" => "parent") );
-              array_shift( $post_terms ); //remove parent term
+              array_shift( $post_terms ); //remove parent term ?>
+							<div class="datum"> <?php the_date('m / Y')  ?></div> <?php
               print_r( '<span class="projektart">' . implode( ' | ', $post_terms ) . '</span>' ); ?>
 
-						<p><?php the_date('m / Y'); ?>
 
 
 						<?php if (has_excerpt() ) {
-							the_excerpt();
+							?><h5><?php the_excerpt( '<h1>' . '</h1>' ); ?></h5><?php
 						} ?>
           </p>
 
@@ -55,20 +52,25 @@
 			</div>
 		</div><!-- .row -->
 	</header><!-- .entry-header -->
-	<div class="entry-content container-narrow">
-    <?php the_field('video_iframe'); ?>
-		<?php
-			the_content( sprintf(
-					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ortimis' ), array(
-						'span' => array(
-							'class' => array(),
-						),
-					) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
+	<div class="entry-content container">
+		<div class="row  justify-center">
+			<div class="col-sm-5">
+		    <?php the_field('video_iframe'); ?>
+				<?php
+					the_content( sprintf(
+							/* translators: %s: Name of current post. */
+							wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ortimis' ), array(
+								'span' => array(
+									'class' => array(),
+								),
+							) ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
 
 
-		?>
+				?>
+			</div>
+		</div>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer container-narrow">

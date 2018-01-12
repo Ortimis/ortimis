@@ -44,7 +44,8 @@
 			</div>
 		</div><!-- .row -->
 	</header><!-- .entry-header -->
-	<div class="entry-content container-narrow">
+	<div class="entry-content container-narrow justify-center">
+		<div class="col-sm-5">
 		<?php
 			the_content( sprintf(
 					/* translators: %s: Name of current post. */
@@ -57,6 +58,7 @@
 
 
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer container-narrow">
