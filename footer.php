@@ -16,14 +16,12 @@
 		<div class="container">
 			<div class="row justify-center">
 				<div class="col-md-4">
-					<ul>
-						<li><a href="#">Impressum</a></li>
-						<li><a href="#">Disclaimer</a></li>
-					</ul>
-
-
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 text-center">
+					<ul class="text-center">
+						<li><a href="<?php echo home_url(); ?>/impressum">Impressum</a></li>
+						<li><a href="<?php echo home_url(); ?>/disclaimer">Disclaimer</a></li>
+					</ul>
 				</div>
 				<div class="col-md-4">
 				</div>

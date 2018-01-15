@@ -59,3 +59,14 @@ button {
 		}
 	}
 }
+
+input {
+	padding: ($gutter) ($gutter);
+	border: none;
+	outline: 1px solid;
+	@include transition(all $time $ease);
+	font-weight: 400;
+	font-size: 15px;
+	font-smoothing: antialiased;
+	background-color: transparent;
+}

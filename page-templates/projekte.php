@@ -41,7 +41,7 @@ get_header(); ?>
 															 col-lg-8
 														 <?php } else { ?>
 															 col-lg-4
-														 <?php	} ?>col-md-6 featured featured-left" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');">
+														 <?php	} ?>col-md-6 featured featured-left dark" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');">
 
 									<div class="row">
 										<div class="col-md-8 col-sm-12 box-center-bottom">

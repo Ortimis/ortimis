@@ -80,6 +80,15 @@
 }
 
 /* Small menu. */
+.menu-toggle {
+	outline: none;
+	border: none;
+	background: rgba(0,0,0,0);
+	font-size: 2em;
+	position: relative;
+	left: -7px;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;

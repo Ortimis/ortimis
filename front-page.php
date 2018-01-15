@@ -22,12 +22,12 @@ get_header(); ?>
 				<div class="row">
 					<div class="hero-callout fade-carousel">
 						<div class="slide">
-							<h1 class="hero-callout-header"><span>Film</span>bewegt.</h1>
-							<p>Emotional. Dicht. Vielseitig.</p>
+							<h1 class="hero-callout-header"><span class="light">Film</span><span> bewegt.</span></h1>
+							<p>Die Schnittmenge aller Kunstformen.</p>
 						</div>
 						<div class="slide">
-							<h1 class="hero-callout-header">Web<span>verbindet!</span></h1>
-							<p></p>
+							<h1 class="hero-callout-header"><span>Web</span><span class="light"> verbindet!</span></h1>
+							<p>Ihre Visitenkarte im Internet</p>
 						</div>
 					</div>
 
