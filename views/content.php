@@ -19,7 +19,7 @@
 
 			</div> <?php
 			} ?>
-			<div class="col-sm-5">
+			<div class="col-sm-5 justify-content">
 				<?php
 						if ( is_single() ) :
 								the_title( '<h1 class="entry-title">', '</h1>' );
@@ -44,20 +44,22 @@
 			</div>
 		</div><!-- .row -->
 	</header><!-- .entry-header -->
-	<div class="entry-content container-narrow justify-center">
-		<div class="col-sm-5">
-		<?php
-			the_content( sprintf(
-					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ortimis' ), array(
-						'span' => array(
-							'class' => array(),
-						),
-					) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
+	<div class="entry-content container">
+		<div class="row justify-center">
+			<div class="col-sm-5">
+			<?php
+				the_content( sprintf(
+						/* translators: %s: Name of current post. */
+						wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ortimis' ), array(
+							'span' => array(
+								'class' => array(),
+							),
+						) ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false ) ) );
 
 
-		?>
+			?>
+			</div>
 		</div>
 	</div><!-- .entry-content -->
 

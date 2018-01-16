@@ -23,3 +23,20 @@ iframe {
     top: 0 !important;
   }
 }
+
+.fullsize-img {
+  min-width: 120vw;
+  margin-left: -50vw;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+
+  &::after {
+    content: '';
+    clear: both;
+  }
+}
+
+.bg-fixed {
+  background-attachment: fixed !important;
+}

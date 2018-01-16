@@ -97,3 +97,45 @@ small,
 .no-line-height {
 	line-height: 1em !important;
 }
+
+blockquote {
+	margin: 0 -6em;
+	text-align: left;
+	font-size: 1.5em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	max-width: 35em;
+
+	@media (max-width: $sm) {
+		margin: 0 0;
+		background: rgba(0,0,0,0.2);
+		padding: .5em;
+		font-size: 1em;
+	}
+
+	cite {
+		display: block;
+		margin-top: 1em;
+		font-size: .7em;
+	}
+}
+blockquote:before {
+  color: black;
+  content: '"';
+  font-size: 3em;
+  line-height: 0.3em;
+  margin-right: 0.25em;
+  vertical-align: -0.3em;
+}
+//
+// blockquote:after {
+// 	content: '';
+// 	display: block;
+// 	height: 2px;
+// 	width: 30px;
+// 	background-color: black;
+// 	margin: 2em 0;
+// }
+blockquote p {
+  display: inline;
+}
