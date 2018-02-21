@@ -30,7 +30,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-4">
 						<div class="subtitle-wrapper">
-							<h1 class="myname">Jakob Ortmann | Webdesign & Filmemacher</h1>
+							<h1 class="myname">Jakob Ortmann | Webdesigner & Filmemacher</h1>
 						</div>
 
 						<!-- <div class="site-branding">
